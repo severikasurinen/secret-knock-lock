@@ -1,11 +1,13 @@
 #include <Servo.h> // include servo library
 
 Servo lock;
+
 int mic = 2, servo = 3; // mic and servo pins
 float inDelay = 0.12; // minimum time between knocks (in seconds)
 float threshold = 0.40; // required accuracy (as a portion of a beat)
+
 float beat; // average time between knocks divided by pattern numbers
-unsigned long inTime = 0; // time of last input
+unsigned long inTime; // time of last input
 
 unsigned int pattern[] = { 2, 1, 1, 2, 4, 2 }; // selected pattern (by time between knocks)
 unsigned long times[sizeof(pattern)/2+1]; // time of knocks
@@ -21,6 +23,7 @@ void setup()
   {
     times[i] = 0;
   }
+  inTime = 0;
   
   Serial.begin(9600);
 }
