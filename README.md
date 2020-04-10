@@ -1,4 +1,4 @@
-# secret-knock-lock
+# Secret Knock Lock
 
 The code was made for a secret knock lock project on YouTube: https://www.youtube.com/watch?v=50ylwrORndI
 
